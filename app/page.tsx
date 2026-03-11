@@ -8,6 +8,7 @@ import { SplineSceneBasic } from "@/components/demo-spline"
 import { EvervaultCardDemo } from "@/components/demo-evervault"
 import CardStackDemoPage from "@/components/demo-card-stack"
 import RadialOrbitalTimelineDemo from "@/components/demo-radial-orbital-timeline"
+import ThreeDMarqueeDemo from "@/components/demo-3d-marquee"
 
 export default function Home() {
   const [loadingComplete, setLoadingComplete] = useState(false)
@@ -124,6 +125,21 @@ export default function Home() {
           {/* Radial Orbital Timeline */}
           <div className="w-full flex justify-center items-center relative z-10">
             <RadialOrbitalTimelineDemo />
+          </div>
+        </section>
+
+        {/* FIFTH SEGMENT: Moments Marquee Desktop */}
+        <section id="gallery" className="w-full min-h-screen bg-black flex flex-col md:flex-row items-center justify-center relative z-10 overflow-hidden">
+          <div className="w-full md:w-1/2 flex flex-col justify-center mb-12 md:mb-0 pl-8 md:pl-16 lg:pl-24 md:pr-16 relative z-10">
+            <h2 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 tracking-tight">
+              Moments & Art
+            </h2>
+            <p className="mt-8 text-xl text-neutral-300 font-light leading-relaxed max-w-xl">
+              Somewhere between my first Python script and my latest ML model, I never stopped sketching. There's something about putting pencil to paper that no IDE can replicate — it slows you down, forces you to really look at something before you try to recreate it. This collection is a mix of portraits, photography and visual experiments that I've gathered over the years. It's messy and personal and probably says more about me than my resume does.
+            </p>
+          </div>
+          <div className="w-full md:w-1/2 flex justify-center items-center relative z-10">
+            <ThreeDMarqueeDemo />
           </div>
         </section>
 

@@ -64,7 +64,7 @@ const timelineData = [
 
 export default function RadialOrbitalTimelineDemo() {
   return (
-    <div className="w-full relative min-h-screen pt-12 md:pt-0 pb-12">
+    <div className="w-full relative min-h-screen pt-12 md:pt-0">
       <div className="absolute inset-0 z-0 pointer-events-none">
         <Particles quantity={400} className="h-full w-full" color="#ffffff" vx={0.1} vy={-0.1} />
       </div>
