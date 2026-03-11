@@ -21,7 +21,7 @@ export function SplineSceneBasic() {
             <h1 className="text-2xl md:text-4xl font-light text-neutral-400 tracking-tight leading-tight">
               Hello, I'm
               <br />
-              <span className="text-5xl md:text-7xl lg:text-[6rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 inline-block mt-2 tracking-tighter">
+              <span className="text-4xl md:text-7xl lg:text-[6rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 inline-block mt-2 tracking-tighter">
                 PRIYANKA<br />SINGH
               </span>
             </h1>
