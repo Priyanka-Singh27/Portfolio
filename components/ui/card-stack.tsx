@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
-import { SquareArrowOutUpRight } from "lucide-react";
+import { SquareArrowOutUpRight, Github } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
@@ -14,6 +14,8 @@ export type CardStackItem = {
   href?: string;
   ctaLabel?: string;
   tag?: string;
+  tags?: string[];
+  githubUrl?: string;
 };
 
 export type CardStackProps<T extends CardStackItem> = {
@@ -211,7 +213,7 @@ export function CardStack<T extends CardStackItem>({
                 <motion.div
                   key={item.id}
                   className={cn(
-                    "absolute bottom-0 rounded-2xl border border-white/10 overflow-hidden shadow-xl",
+                    "absolute bottom-0 rounded-2xl border-[0.5px] border-neutral-400/60 overflow-hidden shadow-xl",
                     "will-change-transform select-none bg-neutral-900",
                     isActive ? "cursor-grab active:cursor-grabbing" : "cursor-pointer",
                   )}
@@ -320,15 +322,41 @@ function DefaultFanCard({ item }: { item: CardStackItem; active: boolean }) {
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
       <div className="relative z-10 flex h-full flex-col justify-end p-5">
-        <div className="truncate text-xl font-bold text-white">
+        {item.tags && item.tags.length > 0 && (
+          <div className="flex items-center gap-1.5 mb-2">
+            {item.tags.map((tag, idx) => (
+              <React.Fragment key={tag}>
+                <span className="text-[10px] font-medium uppercase tracking-wider text-white/70">
+                  {tag}
+                </span>
+                {idx < item.tags!.length - 1 && (
+                  <span className="text-white/40 text-[10px]">•</span>
+                )}
+              </React.Fragment>
+            ))}
+          </div>
+        )}
+        <div className="truncate text-xl font-bold text-white pr-10">
           {item.title}
         </div>
         {item.description ? (
-          <div className="mt-1 line-clamp-2 text-sm text-white/80 font-light">
+          <div className="mt-1 line-clamp-2 text-sm text-white/80 font-light pr-10">
             {item.description}
           </div>
         ) : null}
       </div>
+
+      {item.githubUrl && (
+        <a 
+          href={item.githubUrl} 
+          target="_blank" 
+          rel="noreferrer"
+          className="absolute bottom-5 right-5 z-20 p-2 rounded-full bg-black/40 hover:bg-white/20 text-white/70 hover:text-white transition-all backdrop-blur-md border border-white/10"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <Github className="w-5 h-5 relative z-10" />
+        </a>
+      )}
     </div>
   );
 }
