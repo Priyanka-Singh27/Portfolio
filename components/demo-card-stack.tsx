@@ -51,8 +51,8 @@ export default function CardStackDemoPage() {
           intervalMs={2000}
           pauseOnHover
           showDots
-          cardWidth={720}
-          cardHeight={480}
+          cardWidth={600}
+          cardHeight={400}
           spreadDeg={60}
           activeScale={1.05}
           inactiveScale={0.92}

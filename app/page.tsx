@@ -7,6 +7,7 @@ import { Spotlight } from "@/components/ui/spotlight"
 import { SplineSceneBasic } from "@/components/demo-spline"
 import { EvervaultCardDemo } from "@/components/demo-evervault"
 import CardStackDemoPage from "@/components/demo-card-stack"
+import RadialOrbitalTimelineDemo from "@/components/demo-radial-orbital-timeline"
 
 export default function Home() {
   const [loadingComplete, setLoadingComplete] = useState(false)
@@ -110,6 +111,19 @@ export default function Home() {
           {/* Card Stack Centered */}
           <div className="w-full max-w-4xl flex justify-center items-center relative z-10">
             <CardStackDemoPage />
+          </div>
+        </section>
+
+        {/* FOURTH SEGMENT: Orbital Timeline Desktop (Skills) */}
+        <section id="skills" className="w-full min-h-screen bg-black flex flex-col items-center justify-center relative z-10 overflow-hidden">
+          <div className="text-center md:mb-8 relative z-10">
+            <h2 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 tracking-tight">
+              Skills
+            </h2>
+          </div>
+          {/* Radial Orbital Timeline */}
+          <div className="w-full flex justify-center items-center relative z-10">
+            <RadialOrbitalTimelineDemo />
           </div>
         </section>
 
