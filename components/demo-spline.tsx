@@ -18,14 +18,14 @@ export function SplineSceneBasic() {
         {/* Floating Left content */}
         <div className="p-8 md:p-16 lg:pl-40 xl:pl-56 relative z-10 flex flex-col justify-center w-full md:w-[45%] pointer-events-none">
           <div className="pointer-events-auto">
-            <h1 className="text-2xl md:text-4xl font-light text-neutral-400 tracking-tight leading-tight">
+            <h1 className="text-xl md:text-3xl font-light text-neutral-400 tracking-tight leading-tight">
               Hello, I'm
               <br />
-              <span className="text-4xl md:text-7xl lg:text-[6rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 inline-block mt-2 tracking-tighter">
+              <span className="text-3xl md:text-6xl lg:text-[5rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 inline-block mt-2 tracking-tighter">
                 PRIYANKA<br />SINGH
               </span>
             </h1>
-            <p className="mt-6 md:mt-8 text-xl md:text-2xl text-neutral-300 font-light tracking-wide">
+            <p className="mt-4 md:mt-6 text-lg md:text-xl text-neutral-300 font-light tracking-wide">
               A 2nd Year B. Tech CSE AIML Student.
             </p>
           </div>

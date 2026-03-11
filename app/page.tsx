@@ -131,7 +131,7 @@ export default function Home() {
         {/* FIFTH SEGMENT: Moments Marquee Desktop */}
         <section id="gallery" className="w-full min-h-screen bg-black flex flex-col md:flex-row items-center justify-center relative z-10 overflow-hidden">
           <div className="w-full md:w-1/2 flex flex-col justify-center mb-12 md:mb-0 pl-8 md:pl-16 lg:pl-24 md:pr-16 relative z-10">
-            <h2 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 tracking-tight">
+            <h2 className="text-3xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 tracking-tight">
               Moments & Art
             </h2>
             <p className="mt-8 text-xl text-neutral-300 font-light leading-relaxed max-w-xl">
@@ -140,6 +140,67 @@ export default function Home() {
           </div>
           <div className="w-full md:w-1/2 flex justify-center items-center relative z-10">
             <ThreeDMarqueeDemo />
+          </div>
+        </section>
+
+        {/* SIXTH SEGMENT: Contact & Footer */}
+        <section id="contact" className="w-full bg-black py-24 px-8 md:px-24 relative z-10 border-t border-white/10">
+          <div className="max-w-6xl mx-auto flex flex-col">
+
+            <div className="mb-16 md:mb-24">
+              <h2 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 tracking-tight">
+                CONTACT
+              </h2>
+              <p className="mt-4 text-xl md:text-2xl text-neutral-400 font-light">
+                Let's build something meaningful together.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 justify-between">
+
+              {/* Left Column: Email & Phone */}
+              <div className="flex flex-col gap-8">
+                <div>
+                  <h3 className="text-xs font-semibold tracking-widest text-neutral-500 mb-3 uppercase">Email</h3>
+                  <a href="mailto:priyanka.singh24@vit.edu" className="text-lg md:text-xl text-neutral-300 hover:text-white transition-colors duration-300">
+                    singhpriyanka272005@gmail.com
+                  </a>
+                </div>
+                <div>
+                  <h3 className="text-xs font-semibold tracking-widest text-neutral-500 mb-3 uppercase">Phone</h3>
+                  <a href="tel:+917083730329" className="text-lg md:text-xl text-neutral-300 hover:text-white transition-colors duration-300">
+                    +91-708-373-0329
+                  </a>
+                </div>
+              </div>
+
+              {/* Middle Column: Socials */}
+              <div className="flex flex-col gap-4 md:items-center">
+                <div className="flex flex-col gap-5">
+                  <a href="https://github.com/Priyanka-Singh27" target="_blank" rel="noreferrer" className="flex items-center text-lg md:text-xl text-neutral-300 hover:text-white transition-colors gap-2 group w-fit">
+                    Github <span className="transform transition-transform text-neutral-500 group-hover:text-white group-hover:-translate-y-1 group-hover:translate-x-1">↗</span>
+                  </a>
+                  <a href="https://www.linkedin.com/in/priyanka-singh-076661281/" target="_blank" rel="noreferrer" className="flex items-center text-lg md:text-xl text-neutral-300 hover:text-white transition-colors gap-2 group w-fit">
+                    LinkedIn <span className="transform transition-transform text-neutral-500 group-hover:text-white group-hover:-translate-y-1 group-hover:translate-x-1">↗</span>
+                  </a>
+                  <a href="https://leetcode.com/u/Priyanka_Singh27/" target="_blank" rel="noreferrer" className="flex items-center text-lg md:text-xl text-neutral-300 hover:text-white transition-colors gap-2 group w-fit">
+                    LeetCode <span className="transform transition-transform text-neutral-500 group-hover:text-white group-hover:-translate-y-1 group-hover:translate-x-1">↗</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Right Column: Credits */}
+              <div className="flex flex-col justify-end mt-12 md:mt-0 md:items-end">
+                <p className="text-sm md:text-base text-neutral-400 font-light text-left md:text-right leading-relaxed">
+                  Put Together<br />
+                  by <span className="text-neutral-200 font-medium">Priyanka Singh</span>
+                </p>
+                <p className="text-xs text-neutral-600 font-mono mt-4">
+                  © 2026
+                </p>
+              </div>
+
+            </div>
           </div>
         </section>
 
