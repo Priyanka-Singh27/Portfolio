@@ -18,6 +18,33 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-neutral-950 text-neutral-50 selection:bg-neutral-800 selection:text-white">
+      {/* Fixed Social Links Bottom Left - Global Scope */}
+      <div className={`fixed bottom-0 left-0 p-8 md:p-12 z-[200] pointer-events-auto transition-all duration-1000 delay-300 ${loadingComplete ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className="flex flex-col gap-6 items-center">
+          {/* Github */}
+          <a
+            href="https://github.com/Priyanka-Singh27"
+            target="_blank"
+            rel="noreferrer"
+            className="relative group p-2.5"
+          >
+            <div className="absolute inset-0 bg-white/10 rounded-xl opacity-0 scale-50 transition-all duration-300 ease-out group-hover:opacity-100 group-hover:scale-100" />
+            <Github className="w-4 h-4 md:w-5 md:h-5 text-neutral-400 transition-all duration-300 group-hover:text-white group-hover:scale-110 relative z-10" />
+          </a>
+
+          {/* LinkedIn */}
+          <a
+            href="https://www.linkedin.com/in/priyanka-singh-076661281/"
+            target="_blank"
+            rel="noreferrer"
+            className="relative group p-2.5"
+          >
+            <div className="absolute inset-0 bg-white/10 rounded-xl opacity-0 scale-50 transition-all duration-300 ease-out group-hover:opacity-100 group-hover:scale-100" />
+            <Linkedin className="w-4 h-4 md:w-5 md:h-5 text-neutral-400 transition-all duration-300 group-hover:text-white group-hover:scale-110 relative z-10" />
+          </a>
+        </div>
+      </div>
+
       <LoadingOverlay onComplete={() => setLoadingComplete(true)}>
 
         {/* FIRST SEGMENT: 100vh Full Screen */}
@@ -55,33 +82,6 @@ export default function Home() {
             </nav>
           </header>
 
-          {/* Fixed Social Links Bottom Left */}
-          <div className="absolute bottom-0 left-0 p-8 md:p-12 z-50 pointer-events-auto">
-            <div className="flex flex-col gap-6 items-center">
-              {/* Github */}
-              <a
-                href="https://github.com/Priyanka-Singh27"
-                target="_blank"
-                rel="noreferrer"
-                className="relative group p-2.5"
-              >
-                <div className="absolute inset-0 bg-white/10 rounded-xl opacity-0 scale-50 transition-all duration-300 ease-out group-hover:opacity-100 group-hover:scale-100" />
-                <Github className="w-4 h-4 md:w-5 md:h-5 text-neutral-400 transition-all duration-300 group-hover:text-white group-hover:scale-110 relative z-10" />
-              </a>
-
-              {/* LinkedIn */}
-              <a
-                href="#"
-                target="_blank"
-                rel="noreferrer"
-                className="relative group p-2.5"
-              >
-                <div className="absolute inset-0 bg-white/10 rounded-xl opacity-0 scale-50 transition-all duration-300 ease-out group-hover:opacity-100 group-hover:scale-100" />
-                <Linkedin className="w-4 h-4 md:w-5 md:h-5 text-neutral-400 transition-all duration-300 group-hover:text-white group-hover:scale-110 relative z-10" />
-              </a>
-            </div>
-          </div>
-
           {/* 3D Spline Canvas */}
           <SplineSceneBasic />
         </section>
@@ -103,8 +103,8 @@ export default function Home() {
         </section>
 
         {/* THIRD SEGMENT: Card Stack Desktop (Projects) */}
-        <section id="projects" className="w-full min-h-screen bg-black flex flex-col items-center justify-center py-24 px-8 md:px-24 relative z-10 overflow-hidden">
-          <div className="text-center mb-16 relative z-10">
+        <section id="projects" className="w-full min-h-screen bg-black flex flex-col items-center justify-center pt-12 pb-24 px-8 md:px-24 relative z-10 overflow-hidden">
+          <div className="text-center mb-8 relative z-10">
             <h2 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 tracking-tight">
               Projects
             </h2>
