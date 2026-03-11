@@ -26,7 +26,7 @@ export function SplineSceneBasic() {
               </span>
             </h1>
             <p className="mt-4 md:mt-6 text-lg md:text-xl text-neutral-300 font-light tracking-wide">
-              A 2nd Year B. Tech CSE AIML Student.
+              An Undergrad Student.
             </p>
           </div>
         </div>
